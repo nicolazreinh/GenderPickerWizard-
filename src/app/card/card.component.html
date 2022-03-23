@@ -1,0 +1,73 @@
+<mat-toolbar color="primary">
+  <span>Gender Picker Wizard</span>
+</mat-toolbar>
+<div class="container">
+  <mat-card align="center"  style="margin: 0;padding: 0;">
+    <div class="row justify-content-md-center" >
+      <div class="col-12">
+        <mat-card-title
+          ><div class="temp">
+            Full Name: <br />{{ currentPersonName }}
+          </div></mat-card-title
+        >
+      </div>
+    </div>
+    <img src="https://cdn-icons-png.flaticon.com/128/1647/1647794.png" />
+    <br /><br />
+    <mat-card-actions>
+      <div class="row justify-content-md-center">
+        <div class="col-3">
+          <button mat-fab color="accent" title="Female" (click)="setGender('Female')">
+            <i class="fas fa-female" style="font-size: 36px"></i>
+          </button>
+        </div>
+        <div class="col-3">
+          <button
+            mat-fab
+            color="basic"
+            title="Unknown"
+            (click)="setGender('Unknown')"
+            *ngIf="counter != people.length"
+          >
+            <mat-icon>question_mark</mat-icon>
+          </button>
+        </div>
+        <div class="col-3">
+          <button
+            mat-fab
+            color="primary"
+            title="Male"
+            (click)="setGender('Male')"
+            *ngIf="counter != people.length"
+          >
+            <i class="fas fa-male" style="font-size: 36px"></i>
+          </button>
+        </div>
+      </div>
+      <div class="row justify-content-md-center">
+        <div class="col-3"  style="margin-bottom: 2%;margin-top: 2%;">
+          <button
+          mat-raised-button
+            color="primary"
+            title="Previous"
+            (click)="onPrevious()"
+            *ngIf="counter"
+          >
+            Previous
+          </button>
+        </div>
+        <div class="col-3"  style="margin-bottom: 2%;margin-top: 2%;">
+          <button
+          mat-raised-button
+            color="primary"
+            title="Next"
+            (click)="onNext()"
+            *ngIf="counter != people.length"
+          >
+            Next
+          </button>
+        </div>
+      </div>
+    </mat-card-actions>
+  </mat-card>
+</div>

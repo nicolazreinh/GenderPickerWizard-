@@ -1,0 +1,21 @@
+<mat-toolbar color="primary">
+  <span>Gender Picker Wizard</span>
+</mat-toolbar>
+<div class="container">
+  <mat-card align="center" style="margin: 0; padding: 0">
+    <div class="row justify-content-md-center" align="center">
+      <div class="col-12">
+        <mat-card-title
+          ><div class="temp">Enter Your Name: <br /></div
+        ></mat-card-title>
+        <div class="col-3" style="margin-bottom: 2%; margin-top: 2%">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <input matInput placeholder="Ex. Alex" [(ngModel)]="name" required>
+              </mat-form-field>
+            
+          <button mat-raised-button color="primary" title="Next"><a style="text-decoration: none; color: #fff" [routerLink]="['/card', name]">Next</a></button>
+        </div>
+      </div>
+    </div></mat-card
+  >
+</div>

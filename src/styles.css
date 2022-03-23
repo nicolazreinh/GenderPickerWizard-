@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%;  background-color: aliceblue;}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.container {
+    margin-top: 4%;
+    width: 50%;
+}
+
+.temp {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 10px;
+    background: #d9ddf2;
+    color: #212a5e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
